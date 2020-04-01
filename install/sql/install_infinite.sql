@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `install_infinite`
+-- Database: `install_imskaa`
 --
 
 -- --------------------------------------------------------
@@ -297,9 +297,9 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `lang_id`, `title`, `page_description`, `page_keywords`, `slug`, `is_custom`, `page_content`, `page_order`, `page_active`, `title_active`, `breadcrumb_active`, `right_column_active`, `need_auth`, `location`, `link`, `parent_id`, `created_at`) VALUES
-(1, 1, 'Gallery', 'Gallery Page', 'gallery, infinite', 'gallery', 0, NULL, 5, 1, 1, 1, 0, 0, 'header', NULL, 0, '2019-11-17 18:58:19'),
-(2, 1, 'Contact', 'Contact Page', 'contact, infinite', 'contact', 0, NULL, 6, 1, 1, 1, 0, 0, 'header', NULL, 0, '2019-11-17 18:59:53'),
-(3, 1, 'Terms & Conditions', 'Terms & Conditions Page', 'terms, conditions, infinite', 'terms-conditions', 0, NULL, 1, 1, 1, 1, 0, 0, 'footer', NULL, 0, '2019-11-17 19:01:38');
+(1, 1, 'Gallery', 'Gallery Page', 'gallery, imskaa', 'gallery', 0, NULL, 5, 1, 1, 1, 0, 0, 'header', NULL, 0, '2019-11-17 18:58:19'),
+(2, 1, 'Contact', 'Contact Page', 'contact, imskaa', 'contact', 0, NULL, 6, 1, 1, 1, 0, 0, 'header', NULL, 0, '2019-11-17 18:59:53'),
+(3, 1, 'Terms & Conditions', 'Terms & Conditions Page', 'terms, conditions, imskaa', 'terms-conditions', 0, NULL, 1, 1, 1, 1, 0, 0, 'footer', NULL, 0, '2019-11-17 19:01:38');
 
 -- --------------------------------------------------------
 

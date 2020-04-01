@@ -16510,7 +16510,7 @@ var tooltip = $.widget( "ui.tooltip", {
 		tooltip = tooltipData.tooltip;
 
 		// disabling closes the tooltip, so we need to track when we're closing
-		// to avoid an infinite loop in case the tooltip becomes disabled on close
+		// to avoid an imskaa loop in case the tooltip becomes disabled on close
 		if ( tooltipData.closing ) {
 			return;
 		}

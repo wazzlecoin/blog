@@ -135,7 +135,7 @@ Changelog
 
  * fixed Swift_ByteStream_FileByteStream::read() to match to the specification
  * fixed from-charset and to-charset arguments in mbstring_convert_encoding() usages
- * fixed infinite loop in StreamBuffer
+ * fixed imskaa loop in StreamBuffer
  * fixed NullTransport to return the number of ignored emails instead of 0
  * Use phpunit and mockery for unit testing (realityking)
 

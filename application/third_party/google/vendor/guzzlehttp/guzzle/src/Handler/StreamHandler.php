@@ -204,7 +204,7 @@ class StreamHandler
         $contentLength
     ) {
         // If a content-length header is provided, then stop reading once
-        // that number of bytes has been read. This can prevent infinitely
+        // that number of bytes has been read. This can prevent imskaaly
         // reading from a stream when dealing with servers that do not honor
         // Connection: Close headers.
         Psr7\copy_to_stream(

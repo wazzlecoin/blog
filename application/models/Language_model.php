@@ -74,15 +74,15 @@ class Language_model extends CI_Model
     {
         //add pages
         $page = array(
-            'lang_id' => $lang_id, 'title' => "Gallery", 'slug' => "gallery", 'page_description' => "Imskaa Gallery Page", 'page_keywords' => "infinite, gallery , page", 'is_custom' => 0, 'page_content' => "", 'page_order' => 2, 'page_active' => 1, 'title_active' => 1, 'breadcrumb_active' => 1, 'right_column_active' => 0, 'need_auth' => 0, 'location' => "header", 'parent_id' => 0
+            'lang_id' => $lang_id, 'title' => "Gallery", 'slug' => "gallery", 'page_description' => "Imskaa Gallery Page", 'page_keywords' => "imskaa, gallery , page", 'is_custom' => 0, 'page_content' => "", 'page_order' => 2, 'page_active' => 1, 'title_active' => 1, 'breadcrumb_active' => 1, 'right_column_active' => 0, 'need_auth' => 0, 'location' => "header", 'parent_id' => 0
         );
         $this->db->insert('pages', $page);
         $page = array(
-            'lang_id' => $lang_id, 'title' => "Contact", 'slug' => "contact", 'page_description' => "Imskaa Contact Page", 'page_keywords' => "infinite, contact, page", 'is_custom' => 0, 'page_content' => "", 'page_order' => 0, 'page_active' => 1, 'title_active' => 1, 'breadcrumb_active' => 1, 'right_column_active' => 0, 'need_auth' => 0, 'location' => "header", 'parent_id' => 0
+            'lang_id' => $lang_id, 'title' => "Contact", 'slug' => "contact", 'page_description' => "Imskaa Contact Page", 'page_keywords' => "imskaa, contact, page", 'is_custom' => 0, 'page_content' => "", 'page_order' => 0, 'page_active' => 1, 'title_active' => 1, 'breadcrumb_active' => 1, 'right_column_active' => 0, 'need_auth' => 0, 'location' => "header", 'parent_id' => 0
         );
         $this->db->insert('pages', $page);
         $page = array(
-            'lang_id' => $lang_id, 'title' => "Terms & Conditions", 'slug' => "terms-conditions", 'page_description' => "Terms & Conditions Page", 'page_keywords' => "infinite, terms, conditions, page", 'is_custom' => 0, 'page_content' => "", 'page_order' => 0, 'page_active' => 1, 'title_active' => 1, 'breadcrumb_active' => 1, 'right_column_active' => 0, 'need_auth' => 0, 'location' => "footer", 'parent_id' => 0
+            'lang_id' => $lang_id, 'title' => "Terms & Conditions", 'slug' => "terms-conditions", 'page_description' => "Terms & Conditions Page", 'page_keywords' => "imskaa, terms, conditions, page", 'is_custom' => 0, 'page_content' => "", 'page_order' => 0, 'page_active' => 1, 'title_active' => 1, 'breadcrumb_active' => 1, 'right_column_active' => 0, 'need_auth' => 0, 'location' => "footer", 'parent_id' => 0
         );
         $this->db->insert('pages', $page);
     }

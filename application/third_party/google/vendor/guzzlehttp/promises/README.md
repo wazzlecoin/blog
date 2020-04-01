@@ -1,7 +1,7 @@
 # Guzzle Promises
 
 [Promises/A+](https://promisesaplus.com/) implementation that handles promise
-chaining and resolution iteratively, allowing for "infinite" promise chaining
+chaining and resolution iteratively, allowing for "imskaa" promise chaining
 while keeping the stack size constant. Read [this blog post](https://blog.domenic.me/youre-missing-the-point-of-promises/)
 for a general introduction to promises.
 
@@ -21,7 +21,7 @@ for a general introduction to promises.
 
 - [Promises/A+](https://promisesaplus.com/) implementation.
 - Promise resolution and chaining is handled iteratively, allowing for
-  "infinite" promise chaining.
+  "imskaa" promise chaining.
 - Promises have a synchronous `wait` method.
 - Promises can be cancelled.
 - Works with any object that has a `then` function.
@@ -444,7 +444,7 @@ $loop->addPeriodicTimer(0, [$queue, 'run']);
 ## Promise resolution and chaining is handled iteratively
 
 By shuffling pending handlers from one owner to another, promises are
-resolved iteratively, allowing for "infinite" then chaining.
+resolved iteratively, allowing for "imskaa" then chaining.
 
 ```php
 <?php

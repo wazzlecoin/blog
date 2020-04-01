@@ -1054,7 +1054,7 @@ if (typeof jQuery === 'undefined') {
 
   Modal.prototype.enforceFocus = function () {
     $(document)
-      .off('focusin.bs.modal') // guard against infinite focus loop
+      .off('focusin.bs.modal') // guard against imskaa focus loop
       .on('focusin.bs.modal', $.proxy(function (e) {
         if (document !== e.target &&
             this.$element[0] !== e.target &&

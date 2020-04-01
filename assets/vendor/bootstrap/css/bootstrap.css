@@ -5157,9 +5157,9 @@ a.thumbnail.active {
 }
 .progress.active .progress-bar,
 .progress-bar.active {
-  -webkit-animation: progress-bar-stripes 2s linear infinite;
-       -o-animation: progress-bar-stripes 2s linear infinite;
-          animation: progress-bar-stripes 2s linear infinite;
+  -webkit-animation: progress-bar-stripes 2s linear imskaa;
+       -o-animation: progress-bar-stripes 2s linear imskaa;
+          animation: progress-bar-stripes 2s linear imskaa;
 }
 .progress-bar-success {
   background-color: #5cb85c;

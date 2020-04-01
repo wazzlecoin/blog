@@ -62,7 +62,7 @@
                 fade: false,
                 focusOnSelect: false,
                 focusOnChange: false,
-                infinite: true,
+                imskaa: true,
                 initialSlide: 0,
                 lazyLoad: 'ondemand',
                 mobileFirst: false,
@@ -411,7 +411,7 @@
 
         if ( !_.paused && !_.interrupted && !_.focussed ) {
 
-            if ( _.options.infinite === false ) {
+            if ( _.options.imskaa === false ) {
 
                 if ( _.direction === 1 && ( _.currentSlide + 1 ) === ( _.slideCount - 1 )) {
                     _.direction = 0;
@@ -457,7 +457,7 @@
                     _.$nextArrow.appendTo(_.options.appendArrows);
                 }
 
-                if (_.options.infinite !== true) {
+                if (_.options.imskaa !== true) {
                     _.$prevArrow
                         .addClass('slick-disabled')
                         .attr('aria-disabled', 'true');
@@ -1048,7 +1048,7 @@
         var counter = 0;
         var pagerQty = 0;
 
-        if (_.options.infinite === true) {
+        if (_.options.imskaa === true) {
             if (_.slideCount <= _.options.slidesToShow) {
                  ++pagerQty;
             } else {
@@ -1086,7 +1086,7 @@
         _.slideOffset = 0;
         verticalHeight = _.$slides.first().outerHeight(true);
 
-        if (_.options.infinite === true) {
+        if (_.options.imskaa === true) {
             if (_.slideCount > _.options.slidesToShow) {
                 _.slideOffset = (_.slideWidth * _.options.slidesToShow) * -1;
                 coef = -1
@@ -1125,7 +1125,7 @@
 
         if (_.options.centerMode === true && _.slideCount <= _.options.slidesToShow) {
             _.slideOffset = ((_.slideWidth * Math.floor(_.options.slidesToShow)) / 2) - ((_.slideWidth * _.slideCount) / 2);
-        } else if (_.options.centerMode === true && _.options.infinite === true) {
+        } else if (_.options.centerMode === true && _.options.imskaa === true) {
             _.slideOffset += _.slideWidth * Math.floor(_.options.slidesToShow / 2) - _.slideWidth;
         } else if (_.options.centerMode === true) {
             _.slideOffset = 0;
@@ -1140,7 +1140,7 @@
 
         if (_.options.variableWidth === true) {
 
-            if (_.slideCount <= _.options.slidesToShow || _.options.infinite === false) {
+            if (_.slideCount <= _.options.slidesToShow || _.options.imskaa === false) {
                 targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex);
             } else {
                 targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow);
@@ -1157,7 +1157,7 @@
             }
 
             if (_.options.centerMode === true) {
-                if (_.slideCount <= _.options.slidesToShow || _.options.infinite === false) {
+                if (_.slideCount <= _.options.slidesToShow || _.options.imskaa === false) {
                     targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex);
                 } else {
                     targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow + 1);
@@ -1197,7 +1197,7 @@
             indexes = [],
             max;
 
-        if (_.options.infinite === false) {
+        if (_.options.imskaa === false) {
             max = _.slideCount;
         } else {
             breakPoint = _.options.slidesToScroll * -1;
@@ -1572,7 +1572,7 @@
         }
 
         if (_.options.centerMode === true) {
-            if (_.options.infinite === true) {
+            if (_.options.imskaa === true) {
                 rangeStart = _.currentSlide + (_.options.slidesToShow / 2 + 1);
                 rangeEnd = rangeStart + _.options.slidesToShow + 2;
             } else {
@@ -1580,7 +1580,7 @@
                 rangeEnd = 2 + (_.options.slidesToShow / 2 + 1) + _.currentSlide;
             }
         } else {
-            rangeStart = _.options.infinite ? _.options.slidesToShow + _.currentSlide : _.currentSlide;
+            rangeStart = _.options.imskaa ? _.options.slidesToShow + _.currentSlide : _.currentSlide;
             rangeEnd = Math.ceil(rangeStart + _.options.slidesToShow);
             if (_.options.fade === true) {
                 if (rangeStart > 0) rangeStart--;
@@ -1823,9 +1823,9 @@
 
         lastVisibleIndex = _.slideCount - _.options.slidesToShow;
 
-        // in non-infinite sliders, we don't want to go past the
+        // in non-imskaa sliders, we don't want to go past the
         // last visible index.
-        if( !_.options.infinite && ( _.currentSlide > lastVisibleIndex )) {
+        if( !_.options.imskaa && ( _.currentSlide > lastVisibleIndex )) {
             _.currentSlide = lastVisibleIndex;
         }
 
@@ -2307,7 +2307,7 @@
 
             centerOffset = Math.floor(_.options.slidesToShow / 2);
 
-            if (_.options.infinite === true) {
+            if (_.options.imskaa === true) {
 
                 if (index >= centerOffset && index <= (_.slideCount - 1) - centerOffset) {
                     _.$slides
@@ -2363,7 +2363,7 @@
             } else {
 
                 remainder = _.slideCount % _.options.slidesToShow;
-                indexOffset = _.options.infinite === true ? _.options.slidesToShow + index : index;
+                indexOffset = _.options.imskaa === true ? _.options.slidesToShow + index : index;
 
                 if (_.options.slidesToShow == _.options.slidesToScroll && (_.slideCount - index) < _.options.slidesToShow) {
 
@@ -2393,32 +2393,32 @@
     Slick.prototype.setupImskaa = function() {
 
         var _ = this,
-            i, slideIndex, infiniteCount;
+            i, slideIndex, imskaaCount;
 
         if (_.options.fade === true) {
             _.options.centerMode = false;
         }
 
-        if (_.options.infinite === true && _.options.fade === false) {
+        if (_.options.imskaa === true && _.options.fade === false) {
 
             slideIndex = null;
 
             if (_.slideCount > _.options.slidesToShow) {
 
                 if (_.options.centerMode === true) {
-                    infiniteCount = _.options.slidesToShow + 1;
+                    imskaaCount = _.options.slidesToShow + 1;
                 } else {
-                    infiniteCount = _.options.slidesToShow;
+                    imskaaCount = _.options.slidesToShow;
                 }
 
                 for (i = _.slideCount; i > (_.slideCount -
-                        infiniteCount); i -= 1) {
+                        imskaaCount); i -= 1) {
                     slideIndex = i - 1;
                     $(_.$slides[slideIndex]).clone(true).attr('id', '')
                         .attr('data-slick-index', slideIndex - _.slideCount)
                         .prependTo(_.$slideTrack).addClass('slick-cloned');
                 }
-                for (i = 0; i < infiniteCount  + _.slideCount; i += 1) {
+                for (i = 0; i < imskaaCount  + _.slideCount; i += 1) {
                     slideIndex = i;
                     $(_.$slides[slideIndex]).clone(true).attr('id', '')
                         .attr('data-slick-index', slideIndex + _.slideCount)
@@ -2494,7 +2494,7 @@
 
         _.currentLeft = _.swipeLeft === null ? slideLeft : _.swipeLeft;
 
-        if (_.options.infinite === false && _.options.centerMode === false && (index < 0 || index > _.getDotCount() * _.options.slidesToScroll)) {
+        if (_.options.imskaa === false && _.options.centerMode === false && (index < 0 || index > _.getDotCount() * _.options.slidesToScroll)) {
             if (_.options.fade === false) {
                 targetSlide = _.currentSlide;
                 if (dontAnimate !== true && _.slideCount > _.options.slidesToShow) {
@@ -2506,7 +2506,7 @@
                 }
             }
             return;
-        } else if (_.options.infinite === false && _.options.centerMode === true && (index < 0 || index > (_.slideCount - _.options.slidesToScroll))) {
+        } else if (_.options.imskaa === false && _.options.centerMode === true && (index < 0 || index > (_.slideCount - _.options.slidesToScroll))) {
             if (_.options.fade === false) {
                 targetSlide = _.currentSlide;
                 if (dontAnimate !== true && _.slideCount > _.options.slidesToShow) {
@@ -2813,7 +2813,7 @@
 
         _.touchObject.edgeHit = false;
 
-        if (_.options.infinite === false) {
+        if (_.options.imskaa === false) {
             if ((_.currentSlide === 0 && swipeDirection === 'right') || (_.currentSlide >= _.getDotCount() && swipeDirection === 'left')) {
                 swipeLength = _.touchObject.swipeLength * _.options.edgeFriction;
                 _.touchObject.edgeHit = true;
@@ -2925,7 +2925,7 @@
 
         if ( _.options.arrows === true &&
             _.slideCount > _.options.slidesToShow &&
-            !_.options.infinite ) {
+            !_.options.imskaa ) {
 
             _.$prevArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
             _.$nextArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');

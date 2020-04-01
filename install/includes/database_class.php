@@ -32,7 +32,7 @@ class Database {
 			return false;
 
 		// Open the default SQL file
-		$query = file_get_contents('sql/install_infinite.sql');
+		$query = file_get_contents('sql/install_imskaa.sql');
 
 		// Execute a multi query
 		$mysqli->multi_query($query);

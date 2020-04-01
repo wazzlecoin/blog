@@ -974,7 +974,7 @@ interfaces.
 
 ## 3.0.5 - 2012-11-18
 
-* Bug: Fixing an infinite recursion bug caused from revalidating with the CachePlugin
+* Bug: Fixing an imskaa recursion bug caused from revalidating with the CachePlugin
 * Bug: Response body can now be a string containing "0"
 * Bug: Using Guzzle inside of a phar uses system by default but now allows for a custom cacert
 * Bug: QueryString::fromString now properly parses query string parameters that contain equal signs
