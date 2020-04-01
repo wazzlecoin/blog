@@ -535,7 +535,7 @@
 
         $('img[data-lazy]', _.$slider).not('[src]').addClass('slick-loading');
 
-        _.setupImskaa();
+        _.setupInfinite();
 
         _.buildArrows();
 
@@ -1918,7 +1918,7 @@
         _.registerBreakpoints();
 
         _.setProps();
-        _.setupImskaa();
+        _.setupInfinite();
         _.buildArrows();
         _.updateArrows();
         _.initArrowEvents();
@@ -2390,7 +2390,7 @@
         }
     };
 
-    Slick.prototype.setupImskaa = function() {
+    Slick.prototype.setupInfinite = function() {
 
         var _ = this,
             i, slideIndex, infiniteCount;
