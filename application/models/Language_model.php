@@ -43,9 +43,10 @@ class Language_model extends CI_Model
         $settings = array(
             'lang_id' => $lang_id,
             'application_name' => "Imskaa",
+            'site_title' => "Imskaa - Blog Magazine",
             'home_title' => "Index",
-            'site_description' => "Infinite - Blog Magazine",
-            'keywords' => "Infinite, Blog, Magazine",
+            'site_description' => "Imskaa - Blog Magazine",
+            'keywords' => "Imskaa, Blog, Magazine",
             'facebook_url' => "",
             'twitter_url' => "https://t.me/imskaaz",
             'instagram_url' => "",
