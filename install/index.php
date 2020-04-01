@@ -112,14 +112,13 @@ if (!isset($license_code)) {
 											<h1 class="step-title">Start</h1>
 
 											<div class="form-group text-center">
-												<center><a href="https://bit.ly/2QCCRlD" target="_blank" class="btn btn-success btn-custom">Free scriptzZz!</a></center>
+												<center><a href="https://t.me/imskaaz" target="_blank" class="btn btn-success btn-custom">Hire Me again !</a></center>
 											</div>
 
 											<div class="form-group">
-												<label for="email">License Code</label>
+												<label for="email">Telegram username</label>
 												<textarea name="license_code" class="form-control form-input" style="resize: vertical; height: 100px;line-height: 24px;padding: 10px;" placeholder="Enter anything you want!" required><?php echo $license_code; ?></textarea>
-												<small style="margin-top: 10px;display: block">*You need to enter your license code to this field (<strong>not your purchase code</strong>). If you don't have a license code,
-													you need to generate it by clicking "Generate License Code" button.
+												<small style="margin-top: 10px;display: block">*You need to enter your telegram username, example : imskaaz.
 												</small>
 											</div>
 										</div>
