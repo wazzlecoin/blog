@@ -5,7 +5,7 @@
 
 <footer class="main-footer">
 	<div class="pull-right hidden-xs">
-		<strong style="font-weight: 600;"><?php echo $settings->copyright; ?>&nbsp;</strong>
+		<strong style="font-weight: 600;"><a href="mailto:imskaa.co@gmail.com"</strong>
 	</div>
 	<b>Version</b> 1.0
 </footer>

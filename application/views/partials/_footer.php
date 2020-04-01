@@ -111,7 +111,7 @@
 							<?php foreach ($main_menu as $menu_item): ?>
 								<?php if ($menu_item->item_location == "footer"): ?>
 									<li>
-										<a href="<?php echo generate_menu_item_url($menu_item); ?>"><?php echo html_escape($menu_item->item_name); ?> </a> - <a href="mailto:imskaa.co@gmail.com">Dev by imskaaz</a>
+										<a href="<?php echo generate_menu_item_url($menu_item); ?>"><?php echo html_escape($menu_item->item_name); ?> </a> - <a href="mailto:imskaa.co@gmail.com">Dev by imskaa</a>
 									</li>
 								<?php endif; ?>
 							<?php endforeach; ?>
